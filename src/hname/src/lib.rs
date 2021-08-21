@@ -21,7 +21,7 @@ extern "C"
 #[cfg(any(unix, target_os = "liberty"))]
 use std::ffi::CStr;
 
-#[cfg(any(unix, target_os = "liberty"))
+#[cfg(any(unix, target_os = "liberty"))]
 pub fn get_hname() -> Option<String>
 {
 	let len = 255;
