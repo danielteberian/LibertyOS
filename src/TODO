@@ -1,9 +1,15 @@
 Completed:
 
-hname
+- hname (Returns hostname)
 
 
 WIP:
-- arc
-- bootloader
-- progbar
+- appsb (Application-sandboxing)
+- arc (An alternative to TAR)
+- bootloader (A bootloader)
+- progbar (Progress bar)
+- kernel (The LibertyOS kernel)
+- libertysh (Shel)
+- libload (A library to assist in loading libraries)
+- libfiletime (A library to manage file times)
+- libsyscall (A library to handle system calls)

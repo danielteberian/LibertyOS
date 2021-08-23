@@ -1,0 +1,12 @@
+[package]
+name = "libertyutils"
+version = "0.1.0"
+authors = ["Daniel P. Teberian"]
+description = "The default utilities for LibertyOS."
+edition = "2018"
+
+[[bin]]
+name = "csr"
+path = "src/csr.rs"
+
+[dependencies]
