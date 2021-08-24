@@ -51,7 +51,7 @@ libfs:
 		mov cx, (BLKSIZE/512)
 		mov dx, 0
 		call load
-		call print_ln
+		call println
 		ret
 		align BLKSIZE, db 0
 	.header:
@@ -155,7 +155,7 @@ libfs.open:
 		jb .uuid
 		mov si, libfs.env.uuid
 		call print
-		call print_ln
+		call println
 		xor ax, ax
 		ret
 	.errmsg: db "[ERR] FAILED TO OPEN LIBERTYFS: ",0
@@ -180,7 +180,7 @@ libfs.open:
 libfs.root:
 	lea si, [libfs.dir + Node.name]
 	call print
-	call print_ln
+	call println
 	.lp:
 		mov bx, 0
 	.ext:
@@ -234,7 +234,7 @@ libfs.root:
 		call print
 		mov si, .kernel_name
 		call print
-		call print_ln
+		call println
 		mov eax, 1
 		ret
 	.kernel_name: db "KERNEL",0
@@ -242,7 +242,7 @@ libfs.root:
 libfs.kernel:
 	lea si, [libfs.file + Node.name]
 	call print
-	call print_ln
+	call println
 	mov edi, [args.kernel_base]
 	.lp:
 		mov bx, 0

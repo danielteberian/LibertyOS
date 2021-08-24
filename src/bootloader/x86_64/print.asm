@@ -1,6 +1,6 @@
 SECTION .text
 USE16
-print_ln:
+println:
 	mov al, 13
 	call print_char
 	mov al, 10
